@@ -1,10 +1,21 @@
 body {
     font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.main-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.calculator-container {
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #000;
+    background: #000;
 }
 
 .calculator {
@@ -36,8 +47,70 @@ button {
     border-radius: 50%;
     background-color: #555;
     color: #fff;
+    transition: background 0.2s;
 }
 
 button:hover {
     background-color: #666;
+}
+
+.history-container {
+    flex: 1;
+    background: #181818;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    min-width: 280px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1; 
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.history-exp {
+    flex: 1;
+    margin-right: 10px;
+    word-break: break-all;
+}
+
+.copy-btn {
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background 0.2s;
+}
+.copy-btn:hover {
+    background: #666;
 }
